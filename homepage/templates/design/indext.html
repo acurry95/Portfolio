@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>&#x2302; Design Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bgwhite m0 pbottom">
+    <nav class="fixed m5pnav t0 r0 l0 gnav ac grid z3 bgwhite">
+        <div>
+          <a href="#">Interior Designs</a>
+        </div>
+        <div class="jend">
+          <div class="hamburger" onclick="togglelinks()">
+            <div class="m5 bgblack"></div>
+            <div class="m5 bgblack"></div>
+            <div class="m5 bgblack"></div>
+          </div>
+          <div id="nav-links">
+            <a onclick="togglelinks()" href="#">home</a>
+            <a onclick="togglelinks()" href="#about-section">about</a>
+            <a onclick="togglelinks()" href="#portfolio">portfolio</a>
+            <a onclick="togglelinks()" href="#clients-section">clients</a>
+            <a onclick="togglelinks()" href="#contact">contact</a>
+          </div>
+        </div>
+    </nav>
+
+    <header class="grid ac jc m5p herourl ocover w90">
+      <div class="twhite" style="font-size: 4em">Interior Designs</div>
+    </header>
+
+    <section id="about-section" class="w90 tcenter mtb50 p5p">
+        <p>&#124;</p>
+        <p>about</p>
+        <p class="pw50">This is the part where the company talks about itself, talk talk talk, talk talk talk
+          and it's all talk.  That is all that it is... Well... It isn't talk it's text, so text, text text.
+          And text and text.  We have a long and pround history of working really hard.  We work even when we
+          aren't working, and we've been doing it so long that all we know is work.
+        </p>
+    </section>
+
+    <section id="portfolio" class="w100 tcenter mtb50">
+      <p>&#124;</p>
+      <p>portfolio</p>
+    </section>
+
+    <section class="m5p ">
+      <div id="pictures" class="gcol2 grid gap5 pbottom twhite"></div>
+    </section>
+
+    <section id="clients-section" class="w90 tcenter mtb50 p5p">
+        <p>&#124;</p>
+        <p>clients</p>
+        <p class="pw50">Our Clients love us, they love everything about us, they love
+          what we do, what we represent, and just-well... everything.  just
+          trust us.  Why would we lie? what would we have to gain from That?
+          Our clients are just so satisfied, and you will be too.
+        </p>
+    </section>
+
+    <section id="contact" class="w100 tcenter mtb50">
+        <p>&#124;</p>
+        <p>contact us</p>
+    </section>
+
+    <section>
+      <form class="grid ac jc" action="" method="post">
+        <label for="fname">First Name</label><br>
+        <input class="txt-cln underline m5" type="text" name="fname" value="">
+        <label for="lname">Last Name</label><br>
+        <input class="txt-cln underline m5" type="text" name="lname" value="">
+        <label for="email">Email</label>
+        <input class="txt-cln underline m5" type="email" name="email" value="">
+        <textarea class="txt-cln curves p10" name="textarea" rows="15" cols="50" placeholder="so... what's going on?"></textarea>
+        <button type="submit" style="font-size: 1.1em; padding: 16px 20px;" class="txt-cln hover pointer" name="button">Get In Touch</button>
+      </form>
+    </section>
+
+    <footer class="bgwhite fixed w100 z3 tcenter">
+      <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
+      <a href="https://twitter.com/?lang=en" class="fa fa-twitter" target="_blank"></a>
+      <a href="https://instagram.com/" class="fa fa-instagram" target="_blank"></a>
+      <p style="padding-bottom: 15px;">
+        <em>&#xA9; copyright</em>
+      </p>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

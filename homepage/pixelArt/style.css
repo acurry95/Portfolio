@@ -1,0 +1,119 @@
+body {
+  background-image: linear-gradient(#555, #bbb);
+  height: 97vh;
+}
+header {
+  width: 100%;
+  text-align: center;
+  color: #99aa99;
+  font-family: fantasy;
+}
+#canvas-container {
+  display: flex;
+  justify-content: center;
+}
+#canvas {
+  border: 1px solid black;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(8, 80px);
+}
+.pixels {
+  height: 80px;
+  width: 80px;
+  border: none;
+}
+#canvas div {
+  margin-bottom: -3px;
+}
+
+#colorSelector {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(4, 50px);
+}
+.color-select-container {
+  display: none;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+}
+.colorbuttons {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+.colors-main {
+  bottom: 0;
+  left: 15%;
+  position: fixed;
+  width: 70%;
+}
+#reset {
+  float: right;
+  height: 100px;
+  width: 200px;
+  background-color: #ddd;
+  font-size: 1.2em;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.colors-main-button {
+  border: 1px solid black;
+  float: left;
+  display: flex;
+  font-size: 1.2em;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 15px;
+  width: 200px;
+  background-color: #ddd;
+}
+.colors-main-button:hover .color-select-container {
+  display: block;
+}
+
+@media only screen and (max-width: 700px) {
+  #canvas {
+    border: 1px solid black;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+  }
+  .pixels {
+    height: 70px;
+  }
+  .colors-main-button {
+    height: 80px;
+  }
+  #reset {
+    height: 80px;
+  }
+  .color-select-container {
+    bottom: 80px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #canvas {
+    border: 1px solid black;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+  }
+  .pixels {
+    height: 50px;
+    width: 50px;
+  }
+  .colors-main-button {
+    height: 80px;
+  }
+  #reset {
+    height: 80px;
+  }
+  .color-select-container {
+    bottom: 80px;
+  }
+}

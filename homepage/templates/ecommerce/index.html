@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOOOOOW</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body class="m0 poppy secgrad"> <!--take away margin around everything-->
+
+  <nav>
+    <!--FIRST NAVBAR-->
+    <div class="bg-primary flex-between twhite p23sm">
+      <div class="hover">
+          <h1><a href="#" class="twhite txt-cln">Ama<span class="tpink">th</span>&#128166;on</a></h1>
+      </div>
+      <div class="flex-center"><!--search and button-->
+        <input type="text" placeholder="search for something..." class="fbg txt-cln h30 w300 bb" style="border-radius: 10px 0 0 10px;">
+        <button type="search" name="button" class="txt-cln h30 bg-white" style="border-radius: 0 10px 10px 0;">&#128269;</button>
+      </div>
+      <div class="flex-around">
+        <div class="hover"><!--sign in-->
+            <a href="sign_in.html" class="txt-cln twhite fbg">sign in</a>
+        </div>
+        <div class="txt-cln hover rel"><!--shopping cart-->
+          <a href="#" class="txt-cln twhite fbg1">&#128722;
+            <div id="cartcount" class="bubble bg-sec twhite abs fsm flex-center t r">0</div><!--icon-->
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--bottom nav for categories-->
+    <div class="bg-sec flex-around twhite">
+      <div class="p23sm hover">
+        <!--to load the cateogory page, pass a value into a function to search for all of that type, then
+        use that to display on the page-->
+        <a href="category_page.html" onclick="addCart()" class="txt-cln twhite">Dairy</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Vegetables</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Snacks</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Fruit</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Bread</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Bacon</a>
+      </div>
+      <div class="p23sm hover">
+        <a href="#" class="txt-cln twhite">Broke Food</a>
+      </div>
+    </div>
+  </nav>
+
+<!--Image Carousel-->
+  <header class="rel flex-center">
+    <div class="slide fbg">
+        <a href="#" class="txt-cln">
+          <div class="m20 t l abs twhite">
+            <h2 class="ml100 p23sm">Spring Clean Season</h2>
+            <p class="ml150">Check deals on cleaning supplies</p>
+          </div>
+        </a>
+      <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="hero one" class="w100 h100p cover move_down">
+    </div>
+    <div class="slide fbg">
+      <a href="#" class="txt-cln">
+        <div class="m20 t l abs">
+          <h2 class="p23sm ml100">Fill Your Baskets!</h2>
+          <p class="ml150">Search our selection of Easter products</p>
+        </div>
+      </a>
+      <img src="https://images.unsplash.com/photo-1515192337774-033dac0ed561?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="hero two" class="w100 h100p cover">
+    </div>
+
+    <a class="fbg2 abs l m5 twhite point purptxthov hovergrow" onclick="showSlides(-1)">&#10094;</a>
+    <a class="fbg2 abs r m5 twhite point purptxthov hovergrow" onclick="showSlides(1)">&#10095;</a>
+  </header>
+
+<!--SALE CARD SECTION-->
+  <section id="sale_sections" class="flex-around p23">
+    <div class="w300 h450 bg-white tgreen p23sm purplehov point hovergrowsm">
+      <h3>Mothers Day</h3>
+      <img src="https://images.unsplash.com/photo-1526277015674-026cb84653ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Mothers Day" class="w100 h300 cover">
+      <p>Give your Mom a gift she will remember forever</p>
+    </div>
+    <div class="w300 h450 bg-white tpurple p23sm greenhov point hovergrowsm">
+      <h3>Spring Accessories</h3>
+      <img src="https://images.unsplash.com/photo-1503278501277-e50457741130?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="spring accessories" class="w100 h300 cover">
+      <p>Brighten your home with these Springtime accessories</p>
+    </div>
+    <div class="w300 h450 bg-white tgreen p23sm purplehov point hovergrowsm">
+      <h3>Shop Our Deals</h3>
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="deals" class="w100 h300 cover">
+      <p>Shop our Hottest deals</p>
+    </div>
+    <div class="w300 h450 bg-white tpurple p23sm greenhov point hovergrowsm">
+      <h3>Easter Candy</h3>
+      <img src="https://images.unsplash.com/photo-1586199432286-7b9abd3fc3e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="easter candy" class="w100 h300 cover">
+      <p>Shop our selection of easter candy</p>
+    </div>
+  </section>
+
+<!--FIRST HORIZONTAL PRODUCT SCROLL-->
+  <section class="flex-center hideover m5">
+    <div class="tpink zind nogrow point purptxthov hovergrow fbg2" onclick="scrollme(1,1)">
+      &#10094;
+    </div>
+    <div id="trans1" class="flex grow trans">
+      <div class="item-view bg-primary">Product one</div>
+      <div class="item-view bg-yellow">Product two</div>
+      <div class="item-view bg-primary">Product three</div>
+      <div class="item-view bg-yellow">Product four</div>
+      <div class="item-view bg-primary">Product Product five</div>
+      <div class="item-view bg-yellow">Product six</div>
+      <div class="item-view bg-primary">Product seven</div>
+      <div class="item-view bg-yellow">Product eight</div>
+      <div class="item-view bg-primary">Product nine</div>
+      <div class="item-view bg-yellow">Product ten</div>
+      <div class="item-view bg-yellow">Product eleven</div>
+    </div>
+    <div class="tpink zind nogrow point purptxthov hovergrow fbg2" onclick="scrollme(1,-1)">
+      &#10095;
+    </div>
+  </section>
+
+<!--SPRING BANNER-->
+  <section id="banner" class="h300 tyellow m20 fbg">
+    <h4 class="abs p23 fbg"><b>flowers for spring?</b></h4>
+  </section>
+
+<!--SECOND HORIZONTAL SCROLL-->
+<section class="flex-center hideover m5">
+  <div class="tpink zind nogrow point purptxthov hovergrow fbg2" onclick="scrollme(2,1)">
+    &#10094;
+  </div>
+  <div id="trans2" class="flex grow trans">
+    <div class="item-view bg-primary">Product one</div>
+    <div class="item-view bg-yellow">Product two</div>
+    <div class="item-view bg-primary">Product three</div>
+    <div class="item-view bg-yellow">Product four</div>
+    <div class="item-view bg-primary">Product five</div>
+    <div class="item-view bg-yellow">Product six</div>
+    <div class="item-view bg-primary">Product seven</div>
+    <div class="item-view bg-yellow">Product eight</div>
+    <div class="item-view bg-primary">Product nine</div>
+    <div class="item-view bg-yellow">Product ten</div>
+    <div class="item-view bg-yellow">Product eleven</div>
+  </div>
+  <div class="tpink zind nogrow point purptxthov hovergrow fbg2" onclick=scrollme(2,-1)>
+    &#10095;
+  </div>
+</section>
+
+<!--Third SCROLL-->
+<section class="flex-center hideover m5">
+  <div class="txt-cln tpink zind nogrow point purptxthov hovergrow fbg2" onclick="scrollme(3, 1)">
+    &#10094;
+  </div>
+  <div id="trans3" class="flex grow trans">
+    <div class="item-view bg-primary">Product one</div>
+    <div class="item-view bg-yellow">Product two</div>
+    <div class="item-view bg-primary">Product three</div>
+    <div class="item-view bg-yellow">Product four</div>
+    <div class="item-view bg-primary">Product five</div>
+    <div class="item-view bg-yellow">Product six</div>
+    <div class="item-view bg-primary">Productseven</div>
+    <div class="item-view bg-yellow">Product eight</div>
+    <div class="item-view bg-primary">Product nine</div>
+    <div class="item-view bg-yellow">Product ten</div>
+    <div class="item-view bg-yellow">Product eleven</div>
+  </div>
+  <div class="tpink zind nogrow point purptxthov hovergrow fbg2" onclick="scrollme(3, -1)">
+    &#10095;
+  </div>
+</section>
+
+<!--FOOTER-->
+  <footer class="mt20">
+      <div class="flex-center bg-sec bluehov ta">
+        <a href="#" class="txt-cln twhite w100 p23sm">Back To Top</a>
+      </div>
+
+      <div class="flex-around align-top bg-primary ptb20">
+        <div class="flex-center fcol">
+          <h4 class="twhite">Contact Us</h4>
+            <a href="#" class="twhite txt-cln">link one</a>
+            <a href="#" class="twhite txt-cln">link two</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+        </div>
+        <div class="flex-center fcol">
+          <h4 class="twhite">Work With Us</h4>
+            <a href="#" class="twhite txt-cln">link one</a>
+            <a href="#" class="twhite txt-cln">link two</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+        </div>
+        <div class="flex-center fcol">
+          <h4 class="twhite">Explore Our Products</h4>
+            <a href="#" class="twhite txt-cln">link one</a>
+            <a href="#" class="twhite txt-cln">link two</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+
+        </div>
+        <div class="flex-center fcol">
+          <h4 class="twhite">Let Us Help You</h4>
+            <a href="#" class="twhite txt-cln">link one</a>
+            <a href="#" class="twhite txt-cln">link two</a>
+            <a href="#" class="twhite txt-cln">link three</a>
+            <a href="#" class="twhite txt-cln">link four</a>
+        </div>
+      </div>
+    </footer>
+
+
+<script type="text/javascript">
+let slideIndex = 1;
+let slides = document.getElementsByClassName("slide"); //gets list of slides
+var horizontal_pos = [0,0,0];
+
+showSlides(slideIndex); //sets the initial slide
+
+function showSlides(n) {
+  slideIndex += n; //update index
+  if (slideIndex > slides.length) {slideIndex = 1} //updates when index goes too high
+  if (slideIndex < 1) {slideIndex = slides.length} //update when index goes too low
+
+  for(var i = 0; i < slides.length; i++) { //hide all slides
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block"; //show current slide
+}
+
+function scrollme(index, direction) {
+  i = index-1;
+  var width = window.innerWidth; //get current view width
+  var inview = width / 250; //number of products in view
+  //percent extra the slider needs to scroll ex 5 inview gives 6/5 or 120% more than total inview
+  var extra_scroll_percent = (11-inview) / inview; //11 is total number of products in a slide
+  var scroll_length = extra_scroll_percent*100 + 21*extra_scroll_percent;
+  var loc = horizontal_pos[i];
+  var scrollsection = document.getElementById("trans" + index);
+  loc += direction * 63; //3 times the scroll length of about 21% with margin
+  if (loc < -scroll_length) { //need a way to size based on screen size
+    loc = -scroll_length;
+  }
+  if (loc > 0) {
+    loc = 0;
+  }
+  scrollsection.style.transform = `translateX(${loc}%)`;
+  horizontal_pos[i] = loc;
+}
+</script>
+</body>
+</html>
