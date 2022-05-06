@@ -2,27 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Art</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
       <h1 id="titlehead">Create Some Pixel Art</h1>
     </header>
 
-    <section id="canvas-container">
-      <div id="canvas"></div>
-    </section>
+    <section id="canvas"></section>
 
     <section class="colors-main">
-      <div class="colors-main-button">Select A Color
-        <div class="color-select-container">
+      <div class="colors-main-buttons show">
           <div id="colorSelector"></div>
-        </div>
+          Select a Color
       </div>
-      <button id="reset" onclick="document.location.reload(true)">Reset</button>
+      <div class="colors-main-buttons" onclick="document.location.reload(true)">Reset</div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="scriptjs.js"></script>
   </body>
 </html>
