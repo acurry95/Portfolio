@@ -1,59 +1,44 @@
-class canvasButton {
-  constructor(a) {
-    this.a = a;
-    var pixel = document.createElement("div");
-    var button = document.createElement("button");
-    button.setAttribute("id", "pixel" + a);
-    button.classList.add("pixels");
-    button.onclick = function() {setColor(a)};
-    var row = Math.floor(a / 8);
-    if(row % 2 === 0) {
-      if(a % 2 === 0) {
-        button.style.backgroundColor = "#000";
-      }
-    } else {
-      if(a % 2 != 0) {
-        button.style.backgroundColor = "#000";
-      }
-    }
-    pixel.appendChild(button);
-    main.appendChild(pixel);
-  }
+//creates a canvas button with an index
+function canvasButton(index) {
+    return(`
+    <div>
+        <button 
+            id='pixel${index}'
+            onclick='setColor(${index})'>
+        </button>
+    </div>
+    `);
 }
 
-class colorButton {
-  constructor(color) {
-    this.color = color;
-    var col = document.createElement("div");
-    var colButton = document.createElement("button");
-    colButton.classList.add("colorbuttons");
-    colButton.style.backgroundColor = color;
-    colButton.onclick = function() {changeBrush(color)};
-    col.appendChild(colButton);
-    colID.appendChild(col);
-  }
+//creates a color palette button for setting brush color
+function colorButton(color) {
+    return (`
+    <div>
+        <button 
+            style='background-color:${color}'
+            onclick='changeBrush("${color}")'>
+        </button>
+    </div>
+    `);
 }
-
-//ON LOAD
-var brushColor = "red";
+var brushColor="red";
 var main = document.getElementById("canvas");
-var colID = document.getElementById('colorSelector');
-//Add colors here
-var colors = ["red", "blue", "green", "yellow", "white", "black", "purple", "brown", "lime", "lightblue", "pink", "aqua", "gold", "grey", "salmon", "darkolivegreen"];
-//Build the Canvas
-for(var i=0; i<64; i++) {
-  new canvasButton(i);
-}
-//Build the Color Selector
-for(var j = 0; j < colors.length; j++) {
-  new colorButton(colors[j]);
-}
+var colorSelector = document.getElementById('colorSelector');
+var colors = ["white", "yellow", "orange", "red", "magenta", "purple", "blue", "cyan", "green", "darkgreen", "brown", "tan", "lightgrey", "grey", "#444", "black"];
 
+//build the pixel canvas and color selector palette
+for(var i=0; i<64; i++) {
+    main.innerHTML += canvasButton(i);
+}
+for(var j = 0; j < colors.length; j++) {
+    colorSelector.innerHTML += colorButton(colors[j]);
+}
 
 function changeBrush(color) {
-  brushColor = color;
+    brushColor = color;
 }
-
 function setColor(buttonId) {
-  document.getElementById("pixel"+buttonId).style.backgroundColor = brushColor;
+    var pxl = document.getElementById("pixel"+buttonId);
+    pxl.style.backgroundColor = brushColor;
+    pxl.style.border='none';
 }
